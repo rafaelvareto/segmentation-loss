@@ -5,7 +5,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="segloss",
-    version="0.0.0",
+    version="0.0.1",
     description="Cost functions designed for semantic segmentation tasks, namely, Active Boundary Loss, Boundary Loss, Cross-Entropy Loss and Distance Trasform Loss.",
     packages=find_packages(where="python"),
     package_dir={"" : "python"},

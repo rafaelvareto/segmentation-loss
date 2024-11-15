@@ -25,4 +25,6 @@ The proposed functions' API models the conventional cost functions available und
     loss_score.backward()
 ```
 
-## **Futher details to be available soon...**
+There is a notebook tutorial under construction, being implemented with the ```PyTorch``` framework as well as the ```SEGYIO``` library demonstrating how to use DTL in semantic segmentation applications. 
+The tutorial showcases an experiment with the Netherlands' F3 Block volume, a publicly available seismic dataset that has been annotated by Yalaudah for the purpose of machine learning-based facies classification. This dataset is considered a valuable resource for researchers working in the field of geophysical data analysis and machine learning.
+If you have further questions about the proposed approach, you can reach the corresponding author though the contact form available at [www.vareto.com.br](https://vareto.com.br/index.html#contact).
