@@ -38,3 +38,19 @@ def test_bfl():
 
     assert round(loss_score.item(), 3) == None # Replace value
 
+
+def test_cel():
+    image = torch.rand([1, 3, 64, 64])
+    label = torch.zeros([1, 1, 64, 64], dtype=torch.long)
+    
+    for idy in range(image.shape[2]):
+        for idx in range(image.shape[3]):
+            if idy > idx+1: label[:,:,idy,idx] = 1
+            if idy < idx-1: label[:,:,idy,idx] = 2
+
+    criterion  =  segloss.CrossEntropyLoss(reduction='sum')
+    loss_score = criterion(image, label)
+    loss_score.backward()
+
+    assert round(loss_score.item(), 3) == None # Replace value
+
