@@ -1,6 +1,10 @@
 import torch
 
 
+__all__ = ['BoundaryScoreLoss']
+
+
+
 def one_hot(label, n_classes, requires_grad=True):
     """
     Converts a label tensor to a one-hot encoded tensor.

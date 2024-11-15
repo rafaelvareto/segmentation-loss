@@ -1,6 +1,9 @@
 import torch
 
 
+__all__ = ['CrossEntropyLoss']
+
+
 class CrossEntropyLoss:
     """
     A customized CrossEntropyLoss class with optional label smoothing and flexible reduction options.

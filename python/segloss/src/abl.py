@@ -7,6 +7,9 @@ from functools     import partial
 from operator      import itemgetter
 
 
+__all__ = ['ActiveBoundaryLoss']
+
+
 def kl_div(a, b):
     """
     Calculates the Kullback-Leibler divergence between two probability distributions.
