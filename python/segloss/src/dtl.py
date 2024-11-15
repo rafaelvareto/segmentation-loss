@@ -1,6 +1,9 @@
 import torch
 
 
+__all__ = ['DistanceTransformLoss']
+
+
 class DistanceTransformLoss(torch.nn.Module):
     """
     DistanceTransformLoss: A loss function that emphasizes boundary segmentation by
