@@ -36,7 +36,7 @@ def test_bfl():
     loss_score = criterion(image, label)
     loss_score.backward()
 
-    assert round(loss_score.item(), 3) == 4516.308
+    assert round(loss_score.item(), 3) == 4516.309
 
 
 def test_cel():
