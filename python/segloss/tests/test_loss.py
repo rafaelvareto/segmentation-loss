@@ -8,7 +8,7 @@ import segloss
 
 
 def test_abl():
-    image = torch.rand([1, 3, 64, 64])
+    image = torch.rand([1, 3, 64, 64], requires_grad=True)
     label = torch.zeros([1, 1, 64, 64], dtype=torch.long)
     
     for idy in range(image.shape[2]):
@@ -20,11 +20,11 @@ def test_abl():
     loss_score = criterion(image, label)
     loss_score.backward()
 
-    assert round(loss_score.item(), 3) == None # Replace value
+    assert round(loss_score.item(), 3) == 6679.865
 
 
 def test_bfl():
-    image = torch.rand([1, 3, 64, 64])
+    image = torch.rand([1, 3, 64, 64], requires_grad=True)
     label = torch.zeros([1, 1, 64, 64], dtype=torch.long)
     
     for idy in range(image.shape[2]):
@@ -36,11 +36,11 @@ def test_bfl():
     loss_score = criterion(image, label)
     loss_score.backward()
 
-    assert round(loss_score.item(), 3) == None # Replace value
+    assert round(loss_score.item(), 3) == 4516.308
 
 
 def test_cel():
-    image = torch.rand([1, 3, 64, 64])
+    image = torch.rand([1, 3, 64, 64], requires_grad=True)
     label = torch.zeros([1, 1, 64, 64], dtype=torch.long)
     
     for idy in range(image.shape[2]):
@@ -52,12 +52,11 @@ def test_cel():
     loss_score = criterion(image, label)
     loss_score.backward()
 
-    assert round(loss_score.item(), 3) == None # Replace value
-
+    assert round(loss_score.item(), 3) == 4629.286
 
 
 def test_dtl():
-    image = torch.rand([1, 3, 64, 64])
+    image = torch.rand([1, 3, 64, 64], requires_grad=True)
     label = torch.zeros([1, 1, 64, 64], dtype=torch.long)
     
     for idy in range(image.shape[2]):
@@ -69,4 +68,4 @@ def test_dtl():
     loss_score = criterion(image, label)
     loss_score.backward()
 
-    assert round(loss_score.item(), 3) == None # Replace value
+    assert round(loss_score.item(), 3) == 4857.103
