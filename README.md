@@ -1,6 +1,6 @@
 # SEGLOSS: Semantic Segmentation Loss Functions
 
-This project encompasses a list of three cost functions designed for semantic segmentation, to be available soo through the **SegLoss Package** [[PyPi link](https://pypi.org/project/openloss/)] so that it can be easily installed in your environment:
+This project encompasses a list of three cost functions designed for semantic segmentation, also available through the **SegLoss Package** [[PyPi link](https://pypi.org/project/segloss/)] so that it can be easily installed in your environment:
 
 * ```segloss.ActiveBoundaryLoss(border_params=[0.1, 'cpu', True, 0.2, 0.01, 20.], ignore_index=255, weight=None)```
 * ```segloss.BoundaryLoss(border_params=[3, 5, 0.5], ignore_index=255, reduction='mean', weight=None)``` 
